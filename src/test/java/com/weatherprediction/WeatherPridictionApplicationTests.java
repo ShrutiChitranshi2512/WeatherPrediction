@@ -28,7 +28,6 @@ class WeatherPridictionApplicationTests {
     public void setup() throws Exception {
         this.mvc = webAppContextSetup(webApplicationContext).build();
     }
-
     @Test
     public void getWeatherByCityTest() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/v1/weather/prediction?city=london").accept(MediaType.APPLICATION_JSON)

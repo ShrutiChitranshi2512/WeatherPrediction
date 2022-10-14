@@ -14,7 +14,7 @@ public class WeatherPredictionApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(WeatherPredictionApplication.class, args);
-        System.out.println("Hello World");
+        System.out.println("Welcome to Publicis Sapient Weather Api");
     }
 
 }

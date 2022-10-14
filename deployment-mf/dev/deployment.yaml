@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-api
+  labels:
+    app: weather-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: weather-api
+  template:
+    metadata:
+      labels:
+        app: weather-api
+    spec:
+      containers:
+      - name:  weather-api
+        image: $DOCKER_IMAGE
+        env:
+          - name: API_KEY_WEATHER_APP
+            valueFrom:
+              secretKeyRef:
+                name: api-secretes
+                key: API_KEY_WEATHER_APP
+        ports:
+        - containerPort: 8080
