@@ -1,5 +1,6 @@
 package com.weatherprediction.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -11,13 +12,14 @@ import java.util.List;
 @Setter
 @ToString
 @Builder
-public class WeatherObjectList {
+public class WeatherObjectList{//DataList {
 
     private float dt;
     private Main main;
-    private List<WeatherDetail> weather = new ArrayList<WeatherDetail>();
+    private List<WeatherDetail> weather;
     private Clouds clouds;
     private Wind wind;
     private Sys sys;
-    private String dt_txt;
+    @JsonProperty("dt_txt")
+    private String dateText;
 }

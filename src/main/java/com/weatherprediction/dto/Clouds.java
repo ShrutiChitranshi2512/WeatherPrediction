@@ -10,5 +10,5 @@ import lombok.*;
 @Builder
 public class Clouds {
 
-   private float all;
+    private float all;
 }

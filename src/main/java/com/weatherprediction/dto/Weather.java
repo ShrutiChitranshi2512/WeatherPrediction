@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 @ToString
 @Builder
-public class Weather {
+public class Weather{ //WeatherApiResponse{
     private String cod;
     private float message;
     private float cnt;

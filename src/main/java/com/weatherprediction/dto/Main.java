@@ -1,5 +1,6 @@
 package com.weatherprediction.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @NoArgsConstructor
@@ -11,12 +12,17 @@ import lombok.*;
 public class Main {
 
     private float temp;
-    private float temp_min;
-    private float temp_max;
+    @JsonProperty("temp_min")
+    private float tempMin;
+    @JsonProperty("temp_max")
+    private float tempMax;
     private float pressure;
-    private float sea_level;
-    private float grnd_level;
+    @JsonProperty("sea_level")
+    private float seaLevel;
+    @JsonProperty("grnd_level")
+    private float grndLevel;
     private float humidity;
-    private float temp_kf;
+    @JsonProperty("temp_kf")
+    private float tempKF;
 
 }
