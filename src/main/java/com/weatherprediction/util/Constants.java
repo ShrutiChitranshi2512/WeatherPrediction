@@ -1,19 +1,13 @@
 package com.weatherprediction.util;
 
 public class Constants {
-
-    public static final String NO_DATA_FOUND = "No data found";
-
-    public static final String EXTERNAL_API_SENT_MALFORMED_DATA = "External api sent malformed data";
-
-    public static final String WEATHER_NOT_FOUND = "Weather not found for City ";
-
-    public static final String CARRY_UMBRELLA = "Carry umbrella";
-
     public static final String RAIN = "Rain";
+    public static final String THUNDERSTORMS ="Thunderstorms";
+    public static final String WEATHER_NOT_FOUND = "Weather not found for City ";
+    public static final String MSG_CITY_NOT_FOUND = "Data is not present for provided city";
+    public static final String MSG_DATA_FETCHED_SUCCESSFULLY = "Data provided successfully";
+    public static final String MSG_INVALID_INPUT = "Invalid Input provided";
+    public static final String MSG_INTERNAL_SERVER_ERROR = "Internal server error";
+    public static final String SWAGGER_WEATHER_FORECAST_CONTROLLER_DESC = "API to provide the 3 days weather forecast for given city";
 
-    public static final String USE_SUNSCREEN_LOTION = "Use sunscreen lotion";
-    public static final String TOO_WINDY = "It’s too windy, watch out!";
-
-    public static final String THUNDERSTORM ="Don’t step out! A Storm is brewing!";
 }

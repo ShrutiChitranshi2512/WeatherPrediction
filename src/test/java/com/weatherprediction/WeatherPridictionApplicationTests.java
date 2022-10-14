@@ -29,11 +29,9 @@ class WeatherPridictionApplicationTests {
         this.mvc = webAppContextSetup(webApplicationContext).build();
     }
 
-
-
     @Test
     public void getWeatherByCityTest() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/v1/weather/London").accept(MediaType.APPLICATION_JSON)
+        mvc.perform(MockMvcRequestBuilders.get("/v1/weather/prediction?city=london").accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andReturn();
     }
 
@@ -43,7 +41,7 @@ class WeatherPridictionApplicationTests {
     @Test
     public void getWeatherByCityNoContentTest() throws Exception {
         String city = " ";
-        mvc.perform(MockMvcRequestBuilders.get("/v1/weather/" + city).accept(MediaType.APPLICATION_JSON)
+        mvc.perform(MockMvcRequestBuilders.get("/v1/weather/prediction").accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isBadRequest()).andReturn();
     }
 
